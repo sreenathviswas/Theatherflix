@@ -40,7 +40,7 @@ module.exports = {
       ListM: 'app/components/ListM.jsx',
       About: 'app/components/About.jsx'
     },
-    extensions: ['', '.js', '.jsx']
+    extensions: ['', '.js', '.jsx', '.scss']
   },
   module: {
     loaders: [
@@ -51,7 +51,8 @@ module.exports = {
         },
         test: /\.jsx?$/,
         exclude: /(node_modules|bower_components)/
-      }
+      },
+      { test: /\.scss$/, loader: 'style-loader!css-loader'},
     ]
   }
 };

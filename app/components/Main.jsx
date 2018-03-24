@@ -1,5 +1,6 @@
 var React = require('react');
-var Nav = require('Nav');
+var Nav = require('./Nav/Nav');
+var MovieList = require('./MovieList/MovieList');
 // In this file I figure out how to show a movie. 
 
 var Main = React.createClass({
@@ -7,9 +8,7 @@ var Main = React.createClass({
     return (
       <div>
         <Nav/>
-        <h2>Welcome to the list of the movies available</h2>
-        {this.props.children}
-        
+        <MovieList/>
       </div>
     );
   }
